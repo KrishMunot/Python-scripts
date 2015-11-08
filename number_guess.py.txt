@@ -1,0 +1,8 @@
+import random
+import time
+import sys
+
+
+number = random.randint(1, 10)
+
+
