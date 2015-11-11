@@ -5,4 +5,15 @@ import sys
 
 number = random.randint(1, 10)
 
+def check(guessNum):
+	if guessNum == number:
+		print "Congrandulations! You have guessed the correct answer of %d!! You have won the game!!!" % (number)
+		print("")
+		sys.exit()
+
+def finalCheck(guessNum):
+	if guessNum == number:
+		print "Congrandulations!! You guessed the corerect answer of %d!! You have finnally won :-)" % (number)
+
+
 
