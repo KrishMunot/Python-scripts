@@ -10,6 +10,9 @@ def check(guessNum):
 		print "Congrandulations! You have guessed the correct answer of %d!! You have won the game!!!" % (number)
 		print("")
 		sys.exit()
+	else:
+		"It seems like your input wasn't a valid number"
+
 
 
 
