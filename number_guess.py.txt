@@ -11,9 +11,5 @@ def check(guessNum):
 		print("")
 		sys.exit()
 
-def finalCheck(guessNum):
-	if guessNum == number:
-		print "Congrandulations!! You guessed the corerect answer of %d!! You have finnally won :-)" % (number)
-
 
 
