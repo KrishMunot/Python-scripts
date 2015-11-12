@@ -18,5 +18,16 @@ def check(guessNum):
 		"It seems like your input wasn't a valid number"
 
 
+def finalCheck(guessNum):
+	if guessNum == number:
+		print "Congrandulations!! You guessed the corerect answer of %d!! You have finnally won :-)" % (number)
+	elif (guessNum > number) or (guessNum < number):
+		print "Come on! I gave you 3 tries and you still couldn't guess my number  :-("
+		time.sleep(.1)
+		print "The correct answer was %d" % (number) 
+	else:
+		print "Man, you must have fucked someting up"
+
+
 
 
