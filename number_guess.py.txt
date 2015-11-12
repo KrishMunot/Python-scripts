@@ -10,6 +10,10 @@ def check(guessNum):
 		print "Congrandulations! You have guessed the correct answer of %d!! You have won the game!!!" % (number)
 		print("")
 		sys.exit()
+		elif guessNum > number:
+		print "Sorry, your guess was too high :-/"
+	elif guessNum < number: 
+		print "Oops, your guess was too low :-("
 	else:
 		"It seems like your input wasn't a valid number"
 
