@@ -30,8 +30,10 @@ def finalCheck(guessNum):
 		
 
 print "I'm thinking of a number between 1 and 10"
+time.sleep(1)
+print "..."
 
 time.sleep(1)
+guess = input("Can you guess my number?  > ")
 
-print "..."
 
