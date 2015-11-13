@@ -27,7 +27,11 @@ def finalCheck(guessNum):
 		print "The correct answer was %d" % (number) 
 	else:
 		print "Man, you must have fucked someting up"
+		
 
+print "I'm thinking of a number between 1 and 10"
 
+time.sleep(1)
 
+print "..."
 
