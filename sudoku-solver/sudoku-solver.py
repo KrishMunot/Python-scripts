@@ -80,6 +80,22 @@ class sudoku:
                     remaining+=[j]
             if(len(remaining)==1):
                 self.vertex[edge_r][edge_c][1]=remaining[0]
+    def callrule1(self):
+        a=[]
+        for i in range(9):
+            b=[]
+            for j in range(9):
+                b+=[self.vertex[i][j][1]]
+            a+=[b]
+        self.rule2()
+        self.rule1()
+        change=0
+        for i in range(9):
+            for j in range(9):
+                if a[i][j]!=self.vertex[i][j][1]:
+                    change+=1
+        if(change!=0):
+            self.callrule1()
     def ispossible(self,ver,num):
         for i in self.edges[ver]:
             z=i[0]
