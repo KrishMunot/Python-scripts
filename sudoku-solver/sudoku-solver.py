@@ -80,6 +80,14 @@ class sudoku:
                     remaining+=[j]
             if(len(remaining)==1):
                 self.vertex[edge_r][edge_c][1]=remaining[0]
+    def ispossible(self,ver,num):
+        for i in self.edges[ver]:
+            z=i[0]
+            edge_r=(z-1)/9
+            edge_c=(z-1)%9
+            if(self.vertex[edge_r][edge_c][1]==num):
+                return 0
+        return 1
     def rule2(self):
         for i in range(9):
             for ans in self.answer:
