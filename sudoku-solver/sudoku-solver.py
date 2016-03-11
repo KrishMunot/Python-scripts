@@ -154,3 +154,8 @@ class sudoku:
                     no+=1
         if(no==0):
             return
+if __name__ == '__main__':
+    game=sudoku()
+    game.rules()
+    game.printmaze()
+
