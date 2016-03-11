@@ -33,6 +33,36 @@ class sudoku:
         print"-------------------------"
     def insert(self,i,j,data):
         self.maze[i][j]=data
+    def formvertices(self):
+        for i in range(9):
+            b=[]
+            for j in range(1,10):
+                b+=[[i*9+j,self.maze[i][j-1],'*']]
+            self.vertex+=[b]
+    def formedges(self):
+        abc={1:[11]}
+        for i in range(1,82):
+            self.edges[i]=[]
+            x=(i-1)/9
+            y=(i-1)%9
+            rem=self.vertex[x][y]
+            row=(((i-1)/9)%3)
+            r1=(row+1)%3
+            r2=(row+2)%3
+            r1=r1-row
+            r2=r2-row
+            c=(y%3)
+            c1=(c+1)%3
+            c2=(c+2)%3
+            c1=c1-c
+            c2=c2-c
+            for j in range(9):
+                self.edges[i]+=[self.vertex[x][j]]
+                self.edges[i]+=[self.vertex[j][y]]
+            self.edges[i]+=[self.vertex[x+r1][y+c1],self.vertex[x+r1][y+c2],self.vertex[x+r2][y+c1],self.vertex[x+r2][y+c2]]
+            self.edges[i].remove(rem)
+            self.edges[i].remove(rem)
+            self.edges[i].sort()
     def rule1(self):
         for i in range(1,82):
             edge_r=(i-1)/9
