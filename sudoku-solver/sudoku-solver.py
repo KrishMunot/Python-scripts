@@ -87,3 +87,14 @@ class sudoku:
                         index=(x,y)
                 if(number==1):
                     self.vertex[index[0]][index[1]][1]=ans
+    def rules(self):
+        self.callrule1()
+        no=0
+        print "\nSOLUTION: "
+        for i in range(9):
+            for j in range(9):
+                self.maze[i][j]=self.vertex[i][j][1]
+                if(self.maze[i][j]=='_'):
+                    no+=1
+        if(no==0):
+            return
