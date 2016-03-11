@@ -31,6 +31,8 @@ class sudoku:
                 print self.maze[i][j],
             print '|'
         print"-------------------------"
+    def insert(self,i,j,data):
+        self.maze[i][j]=data
     def rule1(self):
         for i in range(1,82):
             edge_r=(i-1)/9
