@@ -31,3 +31,20 @@ class sudoku:
                 print self.maze[i][j],
             print '|'
         print"-------------------------"
+    def rule1(self):
+        for i in range(1,82):
+            edge_r=(i-1)/9
+            edge_c=(i-1)%9
+            possiblities=[]
+            for z in self.edges[i]:
+                i=z[0]
+                row=(i-1)/9
+                col=(i-1)%9
+                if(self.vertex[row][col][1]!='_'):
+                    possiblities+=[self.vertex[row][col][1]]
+            remaining=[]
+            for j in self.answer:
+                if j not in possiblities:
+                    remaining+=[j]
+            if(len(remaining)==1):
+                self.vertex[edge_r][edge_c][1]=remaining[0]
