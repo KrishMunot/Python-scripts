@@ -9,3 +9,15 @@ class sudoku:
         for i in range(0,9):
             self.maze+=[['_','_','_','_','_','_','_','_','_']]           
         file=open("test.txt")
+        count=0
+        for i in file.readlines():
+            count1=0
+            s=i.split()
+            for j in s:
+                if(j!='_'):
+                    j=int(j)
+                self.maze[count][count1]=j
+                count1+=1
+            count+=1
+        self.formvertices()
+        self.formedges() 
