@@ -21,3 +21,13 @@ class sudoku:
             count+=1
         self.formvertices()
         self.formedges() 
+    def printmaze(self):
+        for i in range(0,9):
+            if(i%3==0):
+                print"-------------------------"
+            for j in range(0,9):
+                if(j%3==0):
+                    print '|',
+                print self.maze[i][j],
+            print '|'
+        print"-------------------------"
