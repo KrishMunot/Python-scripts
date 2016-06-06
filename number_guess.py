@@ -2,7 +2,6 @@ import random
 import time
 import sys
 
-
 number = random.randint(1, 10)
 
 def check(guessNum):
@@ -17,7 +16,6 @@ def check(guessNum):
 	else:
 		"It seems like your input wasn't a valid number"
 
-
 def finalCheck(guessNum):
 	if guessNum == number:
 		print "Congrandulations!! You guessed the corerect answer of %d!! You have finnally won :-)" % (number)
@@ -28,7 +26,6 @@ def finalCheck(guessNum):
 	else:
 		print "Man, you must have fucked someting up"
 		
-
 print "I'm thinking of a number between 1 and 10"
 time.sleep(1)
 print "..."
@@ -47,7 +44,6 @@ print("")
 check(guess)
 print("")
 
-
 print("You have guessed 2 times now.")
 guess = input("Last try  > ")
 
@@ -58,4 +54,3 @@ finalCheck(guess)
 
 print("")
 sys.exit()
-
